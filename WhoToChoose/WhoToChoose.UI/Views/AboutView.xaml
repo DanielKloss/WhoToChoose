@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="WhoToChoose.UI.Views.AboutView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <ScrollViewer VerticalScrollMode="Auto" VerticalAlignment="Top" Padding="16">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,24">
+                    <Image Source="..\Assets\Logo.png" Height="50" Margin="0,0,12,0"/>
+                    <StackPanel>
+                        <TextBlock Text="Who To Choose?" Style="{StaticResource TextStyle}"/>
+                        <TextBlock>
+                            <Run Text="Version "/>
+                            <Run Text="{Binding version}"/>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+                <TextBlock Text="Can't decide who should go first in a game? Who should take the rubbish out? Or who should pay the bill? Everyone simply puts their finger on the screen and the app decides!"
+                           TextAlignment="Center" Margin="0,0,0,24" Style="{StaticResource TextStyle}"/>
+                <TextBlock Text="Thank you for downloading my app, I hope you find it useful and enjoyable. Please let me know what you think, or suggest future improvements, by clicking the buttons below."
+                           TextAlignment="Center" Style="{StaticResource TextStyle}"/>
+                <Button x:Name="rateAndReviewButton" Click="rateAndReviewButton_Click" HorizontalAlignment="Center" Margin="0,24,0,0" Width="180">
+                    <StackPanel Orientation="Horizontal">
+                        <FontIcon Glyph="&#xE00A;"/>
+                        <TextBlock Text="Rate and Review" Margin="8,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="feedbackButton" Click="feedbackButton_Click" HorizontalAlignment="Center" Margin="0,24,0,0" Width="180" Visibility="Collapsed">
+                    <StackPanel Orientation="Horizontal">
+                        <FontIcon Glyph="&#xE939;"/>
+                        <TextBlock Text="Leave Feedback" Margin="8,0,0,0"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
